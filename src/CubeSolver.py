@@ -4,30 +4,24 @@
 
 class CubeSolver:
 
-    # cube = [row, col]
-
     cube = []
 
     def getSquare(self,row, col):
         return self.cube[(row*3) + col]
 
     def getFace(self,face):
-        retFace = [[],[],[]]
-        if face == 'top':
-            retFace = [[self.cube[0][3], self.cube[0][4], self.cube[0][5]],
-                       [self.cube[1][3], self.cube[1][4], self.cube[1][5]],
-                       [self.cube[2][3], self.cube[2][4], self.cube[2][5]]]
-        if face == 'bottom':
-            pass
-        if face == 'left':
-            pass
-        if face == 'right':
-            pass
-        if face == 'front':
-            pass
-        if face == 'back':
-            pass
-        return retFace
+        if face == 'U':
+            return self.cube[0:9]
+        if face == 'D':
+            return self.cube[9:18]
+        if face == 'R':
+            return self.cube[18:27]
+        if face == 'L':
+            return self.cube[27:36]
+        if face == 'F':
+            return self.cube[36:45]
+        if face == 'B':
+            return self.cube[45:54]
 
     def createCube(self):
         colors = ['R', 'G', 'B', 'Y', 'O', 'W']
@@ -46,3 +40,9 @@ class CubeSolver:
 
 cube1 = CubeSolver()
 cube1.createCube()
+print(cube1.getFace('U'))
+print(cube1.getFace('D'))
+print(cube1.getFace('R'))
+print(cube1.getFace('L'))
+print(cube1.getFace('F'))
+print(cube1.getFace('B'))
