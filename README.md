@@ -5,6 +5,8 @@ Made by Jake Masters, Patrick Warren, and Josh Teigland.
 
 ## Build Instructions
 
+### Python
+
 To develop Cube-Solver locally:  
 1. Clone the repository.
 2. Open the repository in PyCharm.  
@@ -16,3 +18,15 @@ To develop Cube-Solver locally:
 *.idea/
 .gitignore
 ~~~
+
+### C++
+
+To develop the vision I/O portion locally:  
+1. Clone the repository.
+2. Open the repository in CLion. 
+3. Compile using the following command*:  
+~~~
+$ gcc main.c
+~~~
+
+*Under major construction
