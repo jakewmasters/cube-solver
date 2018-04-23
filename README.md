@@ -24,9 +24,12 @@ To develop Cube-Solver locally:
 To develop the vision I/O portion locally:  
 1. Clone the repository.
 2. Open the repository in CLion. 
-3. Compile using the following command*:  
+3. Compile using the following command:  
 ~~~
-$ gcc main.c
+$ gcc src/main.cpp -lstdc++ -o cube-solver
 ~~~
 
-*Under major construction
+4. Run the executable:
+~~~
+$ ./cube-solver
+~~~
