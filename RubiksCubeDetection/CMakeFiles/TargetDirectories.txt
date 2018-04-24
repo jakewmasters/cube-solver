@@ -1,0 +1,3 @@
+/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles/edit_cache.dir
+/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles/rebuild_cache.dir
+/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles/RubiksCubeDetection.dir
