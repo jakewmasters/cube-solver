@@ -11,6 +11,8 @@ def detect_colors():
     im = cv2.bilateralFilter(im,9,75,75)
     im = cv2.fastNlMeansDenoisingColored(im,None,10,10,7,21)
     hsv_img = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)   # HSV image
+    cv2.imshow("BGR2HSV", hsv_img)
+    cv2.imwrite("hsv.jpg", hsv_img)
 
     # color specific
 
@@ -48,3 +50,5 @@ def detect_colors():
 
 def export_array():
     array = detect_colors()
+
+export_array()
