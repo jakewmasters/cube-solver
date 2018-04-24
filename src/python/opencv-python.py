@@ -16,12 +16,12 @@ def detect_colors():
 
     # color specific
 
-    colors = [[np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8)],  # yellow
-              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8)],  # orange
-              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8)],  # white
-              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8)],  # red
-              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8)],  # green
-              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8)]]  # blue
+    colors = [[np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8), [127,255, 0]],  # yellow
+              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8), [255, 127, 0]],  # orange
+              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8), [0, 255, 127]],  # white
+              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8), [0, 127, 255]],  # red
+              [np.array([20, 100, 100],np.uint8), np.array([204, 255, 61],np.uint8), [255, 0, 127]],  # green
+              [np.array([20, 100, 100],np.uint8), np.array([30, 255, 255],np.uint8), [127, 0, 255]]]  # blue
 
     # COLOR_MIN = np.array([20, 100, 100],np.uint8)       # HSV color code lower and upper bounds
     # COLOR_MAX = np.array([30, 255 , 255],np.uint8)       # color yellow
@@ -32,6 +32,9 @@ def detect_colors():
 
         frame_threshed = cv2.inRange(hsv_img, COLOR_MIN, COLOR_MAX)     # Thresholding image
         ret,thresh = cv2.threshold(frame_threshed,127,255,0)
+        ret, thresh = cv2.threshold(frame_threshed, colors[i][2][0], colors[i][2][1], colors[i][2][2])
+        cv2.imshow("thresh", thresh)
+        cv2.waitKey(2000)
         im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         for cnt in contours:
             x,y,w,h = cv2.boundingRect(cnt)
