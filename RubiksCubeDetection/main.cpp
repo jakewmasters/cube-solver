@@ -22,6 +22,40 @@ void CannyThreshold()
     imshow("No longer Un-Canny", dst);
 }
 
+void blobDetector()
+{
+    SimpleBlobDetector::Params params;
+
+    params.minThreshold = 10;
+    params.maxThreshold = 1000;
+
+    params.filterByArea = true;
+    params.minArea = 50;
+
+    // Filter by Circularity
+    params.filterByCircularity = false;
+    params.minCircularity = 0.05;
+
+// Filter by Convexity
+    params.filterByConvexity = false;
+    params.minConvexity = 0;
+
+// Filter by Inertia
+    params.filterByInertia = false;
+    params.minInertiaRatio = 0.1;
+
+    Ptr<SimpleBlobDetector> detector = SimpleBlobDetector::create(params);
+    std::vector<KeyPoint> keypoints;
+
+    detector->detect(dst,keypoints);
+
+    Mat im_with_keypoints;
+    drawKeypoints( dst, keypoints, im_with_keypoints, Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
+
+// Show blobs
+    imshow("keypoints", im_with_keypoints );
+}
+
 //void SudokuMethod()
 //{
 //    Mat outerBox = Mat(src.size(), CV_8UC1);
@@ -52,6 +86,7 @@ int main(int argc, char** argv )
 
     CannyThreshold();
 //    SudokuMethod();
+    blobDetector();
     waitKey(0);
     return 0;
 }
