@@ -1,0 +1,5 @@
+*.cmake
+RubiksCubeDetection/CMakeCache.txt
+RubiksCubeDetection/Makefile
+CMakeFiles/
+RubiksCubeDetection/RubiksCubeDetection
