@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection
+CMAKE_BINARY_DIR = "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection"
 
 #=============================================================================
 # Target rules for target CMakeFiles/RubiksCubeDetection.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetect
 CMakeFiles/RubiksCubeDetection.dir/all:
 	$(MAKE) -f CMakeFiles/RubiksCubeDetection.dir/build.make CMakeFiles/RubiksCubeDetection.dir/depend
 	$(MAKE) -f CMakeFiles/RubiksCubeDetection.dir/build.make CMakeFiles/RubiksCubeDetection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles --progress-num=1,2 "Built target RubiksCubeDetection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" --progress-num=1,2 "Built target RubiksCubeDetection"
 .PHONY : CMakeFiles/RubiksCubeDetection.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/RubiksCubeDetection.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RubiksCubeDetection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RubiksCubeDetection.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" 0
 .PHONY : CMakeFiles/RubiksCubeDetection.dir/rule
 
 # Convenience name for target.

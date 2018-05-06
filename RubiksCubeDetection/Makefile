@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection
+CMAKE_BINARY_DIR = "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

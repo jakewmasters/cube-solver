@@ -126,7 +126,4 @@ CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/videos
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/videostab/ring_buffer.hpp
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/videostab/stabilizer.hpp
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/videostab/wobble_suppression.hpp
-CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
-CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
-CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 

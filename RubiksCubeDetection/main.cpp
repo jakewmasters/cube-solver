@@ -5,11 +5,14 @@
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
-using namespace std;
 
 Mat src, srcGray;
 Mat dst, detectedEdges;
 Mat kernel;
+std::vector<KeyPoint> keypoints;
+std::vector<Vec3b> colorBins;
+int pointColors[9];
+int cube[6][9];
 
 void CannyThreshold()
 {
@@ -21,7 +24,7 @@ void CannyThreshold()
     dilate(detectedEdges, detectedEdges, kernel);
     dst = Scalar::all(0);
     srcGray.copyTo(dst, detectedEdges);
-    imshow("No longer Un-Canny", dst);
+    // imshow("No longer Un-Canny", dst);
 }
 
 void blobDetector()
@@ -47,17 +50,71 @@ void blobDetector()
     params.minInertiaRatio = 0.1;
 
     Ptr<SimpleBlobDetector> detector = SimpleBlobDetector::create(params);
-    std::vector<KeyPoint> keypoints;
 
     detector->detect(dst, keypoints);
-
-    cout << to_string(keypoints.length);
 
     // Mat im_with_keypoints;
     // drawKeypoints(dst, keypoints, im_with_keypoints, Scalar(0, 0, 255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
 
     // // Show blobs
     // imshow("keypoints", im_with_keypoints);
+}
+
+bool sortPointsYX(KeyPoint a, KeyPoint b)
+{
+    if ((int)a.pt.y == (int)b.pt.y)
+    {
+        return (int)a.pt.x < (int)b.pt.x;
+    }
+    return (int)a.pt.y < (int)b.pt.y;
+}
+
+double colorComparison(Vec3b a, Vec3b b)
+{
+    int rDif = std::abs(a[0] - b[0]);
+    int gDif = std::abs(a[1] - b[1]);
+    int bDif = std::abs(a[2] - b[2]);
+    return (rDif + gDif + bDif) / 3.0;
+}
+
+void detectColors()
+{
+    std::sort(keypoints.begin(), keypoints.end(), sortPointsYX);
+    double colorThreshold = 5.0;
+    for (int i = 0; i < 9; ++i)
+    {
+        Vec3b color = src.at<Vec3b>(keypoints[i].pt);
+        if (colorBins.size() == 0)
+        {
+            colorBins.push_back(color);
+            pointColors[i] = colorBins.size();
+        }
+        bool matchedBin = false;
+        for (int j = 0; j < colorBins.size(); ++j)
+        {
+            Vec3b checkColor = colorBins[j];
+            if (colorComparison(color, checkColor) < colorThreshold)
+            {
+                matchedBin = true;
+                pointColors[i] = j;
+            }
+        }
+        if (!matchedBin)
+        {
+            pointColors[i] = colorBins.size();
+            colorBins.push_back(color);
+        }
+    }
+}
+
+void assignColors(int i)
+{
+    for (int j = 0; j < 9; ++j)
+    {
+        cube[i][j] = pointColors[j];
+        std::cout << pointColors[j] << ' ';
+    }
+    std::cout << std::endl;
 }
 
 int main(int argc, char **argv)
@@ -77,7 +134,12 @@ int main(int argc, char **argv)
     cvtColor(src, srcGray, CV_BGR2GRAY);
 
     CannyThreshold();
-    blobDetector();
-    waitKey(0);
+    while (keypoints.size() != 9)
+    {
+        blobDetector();
+    }
+    detectColors();
+    assignColors(0);
+    // waitKey(0);
     return 0;
 }

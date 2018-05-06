@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection
+CMAKE_BINARY_DIR = "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RubiksCubeDetection.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/RubiksCubeDetection.dir/flags.make
 
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: CMakeFiles/RubiksCubeDetection.dir/flags.make
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RubiksCubeDetection.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubiksCubeDetection.dir/main.cpp.o -c /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RubiksCubeDetection.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubiksCubeDetection.dir/main.cpp.o -c "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/main.cpp"
 
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubiksCubeDetection.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/main.cpp > CMakeFiles/RubiksCubeDetection.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/main.cpp" > CMakeFiles/RubiksCubeDetection.dir/main.cpp.i
 
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubiksCubeDetection.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/main.cpp -o CMakeFiles/RubiksCubeDetection.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/main.cpp" -o CMakeFiles/RubiksCubeDetection.dir/main.cpp.s
 
 CMakeFiles/RubiksCubeDetection.dir/main.cpp.o.requires:
 
@@ -90,54 +90,25 @@ RubiksCubeDetection_EXTERNAL_OBJECTS =
 
 RubiksCubeDetection: CMakeFiles/RubiksCubeDetection.dir/main.cpp.o
 RubiksCubeDetection: CMakeFiles/RubiksCubeDetection.dir/build.make
-RubiksCubeDetection: /usr/local/lib/libopencv_stitching.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_superres.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_videostab.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_aruco.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_bgsegm.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_bioinspired.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_ccalib.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_cvv.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_dpm.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_face.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_freetype.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_fuzzy.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_hdf.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_img_hash.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_line_descriptor.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_optflow.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_reg.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_rgbd.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_saliency.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_sfm.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_stereo.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_structured_light.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_surface_matching.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_tracking.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_xfeatures2d.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_ximgproc.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_xobjdetect.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_xphoto.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_photo.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_shape.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_calib3d.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_video.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_datasets.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_plot.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_text.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_dnn.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_features2d.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_flann.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_highgui.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_ml.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_videoio.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_imgcodecs.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_objdetect.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_imgproc.so.3.3.1
-RubiksCubeDetection: /usr/local/lib/libopencv_core.so.3.3.1
+RubiksCubeDetection: /usr/local/lib/libopencv_dnn.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_ml.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_objdetect.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_shape.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_stitching.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_superres.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_videostab.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_calib3d.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_features2d.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_flann.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_highgui.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_photo.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_video.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_videoio.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_imgcodecs.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_imgproc.so.3.4.1
+RubiksCubeDetection: /usr/local/lib/libopencv_core.so.3.4.1
 RubiksCubeDetection: CMakeFiles/RubiksCubeDetection.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable RubiksCubeDetection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable RubiksCubeDetection"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RubiksCubeDetection.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +125,6 @@ CMakeFiles/RubiksCubeDetection.dir/clean:
 .PHONY : CMakeFiles/RubiksCubeDetection.dir/clean
 
 CMakeFiles/RubiksCubeDetection.dir/depend:
-	cd /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection /home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles/RubiksCubeDetection.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles/RubiksCubeDetection.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/RubiksCubeDetection.dir/depend
 

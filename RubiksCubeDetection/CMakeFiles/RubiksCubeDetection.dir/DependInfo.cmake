@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/main.cpp" "/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/CMakeFiles/RubiksCubeDetection.dir/main.cpp.o"
+  "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/main.cpp" "/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/CMakeFiles/RubiksCubeDetection.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

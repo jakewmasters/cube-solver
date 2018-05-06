@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/main.cpp
+/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/main.cpp
 stdio.h
 -
+string
+-
 opencv2/imgproc/imgproc.hpp
-/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/opencv2/imgproc/imgproc.hpp
+/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/opencv2/imgproc/imgproc.hpp
 opencv2/highgui/highgui.hpp
-/home/CS/users/pwarren/COS351-CV/cube-solver/RubiksCubeDetection/opencv2/highgui/highgui.hpp
+/mnt/c/Users/Josh Teigland/Documents/School/Computer Vision/Rubik's Cube Solver/cube-solver/RubiksCubeDetection/opencv2/highgui/highgui.hpp
 opencv2/opencv.hpp
 -
 
@@ -1285,18 +1287,4 @@ opencv2/videostab/global_motion.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/global_motion.hpp
 opencv2/videostab/log.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/log.hpp
-
-/usr/local/include/opencv2/xfeatures2d.hpp
-opencv2/features2d.hpp
-/usr/local/include/opencv2/opencv2/features2d.hpp
-opencv2/xfeatures2d/nonfree.hpp
-/usr/local/include/opencv2/opencv2/xfeatures2d/nonfree.hpp
-
-/usr/local/include/opencv2/xfeatures2d/cuda.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/xfeatures2d/opencv2/core/cuda.hpp
-
-/usr/local/include/opencv2/xfeatures2d/nonfree.hpp
-opencv2/features2d.hpp
-/usr/local/include/opencv2/xfeatures2d/opencv2/features2d.hpp
 
