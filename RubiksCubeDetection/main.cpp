@@ -13,6 +13,7 @@ std::vector<KeyPoint> keypoints;
 std::vector<Vec3b> colorBins;
 int pointColors[9];
 int cube[6][9];
+std::string faceNames[6] = {"Top", "Bottom", "Right", "Left", "Front", "Back"};
 
 void CannyThreshold()
 {
@@ -112,25 +113,11 @@ void assignColors(int i)
     for (int j = 0; j < 9; ++j)
     {
         cube[i][j] = pointColors[j];
-        std::cout << pointColors[j] << ' ';
     }
-    std::cout << std::endl;
 }
 
-int main(int argc, char **argv)
+void detectFace(int face)
 {
-    if (argc != 2)
-    {
-        printf("usage: DisplayImage.out <Image_Path>\n");
-        return -1;
-    }
-    src = imread(argv[1], 1);
-    if (!src.data)
-    {
-        printf("No image data \n");
-        return -1;
-    }
-
     cvtColor(src, srcGray, CV_BGR2GRAY);
 
     CannyThreshold();
@@ -139,7 +126,47 @@ int main(int argc, char **argv)
         blobDetector();
     }
     detectColors();
-    assignColors(0);
+    assignColors(face);
+}
+
+void printColors()
+{
+    for (int i = 0; i < colorBins.size(); ++i)
+    {
+        Vec3b color = colorBins[i];
+        std::cout << colorBins[i] << std::endl;
+    }
+}
+
+void printCube()
+{
+    for (int i = 0; i < 6; ++i)
+    {
+        for (int j = 0; j < 9; ++j)
+        {
+            std::cout << cube[i][j] << ' ';
+        }
+        std::cout << std::endl;
+    }
+}
+
+int main()
+{
+    for (int i = 0; i < 6; ++i)
+    {
+        std::string filepath;
+        std::cout << faceNames[i] << std::endl;
+        std::cin >> filepath;
+        src = imread(filepath);
+        if (!src.data)
+        {
+            std::cout << "No image data" << std::endl;
+            return -1;
+        }
+        detectFace(i);
+    }
+    printColors();
+    printCube();
     // waitKey(0);
     return 0;
 }
