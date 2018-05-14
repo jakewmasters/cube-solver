@@ -13,7 +13,6 @@ std::vector<KeyPoint> keypoints;
 std::vector<Vec3b> colorBins;
 int pointColors[9];
 int cube[6][9];
-std::string faceNames[6] = {"Top", "Bottom", "Right", "Left", "Front", "Back"};
 
 void CannyThreshold()
 {
@@ -155,7 +154,6 @@ int main()
     for (int i = 0; i < 6; ++i)
     {
         std::string filepath;
-        std::cout << faceNames[i] << std::endl;
         std::cin >> filepath;
         src = imread(filepath);
         if (!src.data)
