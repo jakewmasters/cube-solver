@@ -62,7 +62,9 @@ void blobDetector()
 
 bool sortPointsYX(KeyPoint a, KeyPoint b)
 {
-    if ((int)a.pt.y == (int)b.pt.y)
+    int range = (int)std::min(a.size, b.size) / 4;
+    int diff = std::abs((int)a.pt.y - (int)b.pt.y);
+    if (diff < range) //same row
     {
         return (int)a.pt.x < (int)b.pt.x;
     }
