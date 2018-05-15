@@ -1,0 +1,6 @@
+../data/face-up.png
+../data/face-down.png
+../data/face-right.png
+../data/face-left.png
+../data/face-front.png
+../data/face-back.png

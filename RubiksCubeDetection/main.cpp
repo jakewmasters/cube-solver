@@ -13,7 +13,6 @@ std::vector<KeyPoint> keypoints;
 std::vector<Vec3b> colorBins;
 int pointColors[9];
 int cube[6][9];
-std::string faceNames[6] = {"Top", "Bottom", "Right", "Left", "Front", "Back"};
 
 void CannyThreshold()
 {
@@ -63,7 +62,9 @@ void blobDetector()
 
 bool sortPointsYX(KeyPoint a, KeyPoint b)
 {
-    if ((int)a.pt.y == (int)b.pt.y)
+    int range = (int)std::min(a.size, b.size) / 4;
+    int diff = std::abs((int)a.pt.y - (int)b.pt.y);
+    if (diff < range) //same row
     {
         return (int)a.pt.x < (int)b.pt.x;
     }
@@ -155,7 +156,6 @@ int main()
     for (int i = 0; i < 6; ++i)
     {
         std::string filepath;
-        std::cout << faceNames[i] << std::endl;
         std::cin >> filepath;
         src = imread(filepath);
         if (!src.data)
