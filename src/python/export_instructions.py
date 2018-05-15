@@ -125,10 +125,6 @@ def in_matrix():
     #  ['r','o','g','b','g','y','b','w','r'],
     #  ['w','y','o','g','b','w','g','r','w']]
 
-    # example attribute set
-    mycube.__setattr__(mycube["U"]["U"].colour, "blue")
-    # doesn't work like one would expect
-
     # generate the Cube object
     alg = pc.Formula()
     random_alg = alg.random()
@@ -136,6 +132,11 @@ def in_matrix():
     # cube state before solving
     mycube(random_alg)
     print(mycube)
+
+    # example attribute set
+    mycube.__setattr__(mycube["U"].colour, "blue")
+    print(mycube.__getattr__(mycube["U"].colour))
+    # doesn't work like one would expect
 
     solver = CFOPSolver(mycube)
     solution = solver.solve(suppress_progress_messages=True)
