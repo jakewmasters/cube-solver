@@ -2,6 +2,19 @@ import pycuber as pc
 from pycuber.solver import CFOPSolver
 
 def in_matrix():
+    for i in range(6):
+        skip = input()
+
+    top_face = input()
+    bottom_face = input()
+    right_face = input()
+    left_face = input()
+    front_face = input()
+    back_face = input()
+
+
+
+
     matrix = [['g','o','r','o','w','r','y','b','o'],
               ['p','g','w','y','y','g','b','y','r'],
               ['w','w','b','b','r','o','g','r','y'],
